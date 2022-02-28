@@ -1,0 +1,380 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-gold: #c59d5f;
+  
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: hsl(210, 36%, 96%);
+    color: hsl(209, 61%, 16%);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+p {
+    color: hsl(210, 22%, 49%);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
+main {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+
+
+/*  global classes */
+
+/* section */
+.section {
+    width: 95vw;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+
+/*
+=============== 
+Menu
+===============
+*/
+
+.main-section {
+    padding: 5rem 0;
+}
+.title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.underline {
+    width: 15rem;
+    height: 0.25rem;
+    background: #4682b4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+}
+
+.spacer {
+    height: 20px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4682b4;
+    display: absolute;
+    color: white;
+    width: 200px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.select-player {
+    position: relative;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #f1f1f1;
+    min-width: 200px;
+    height: 300px;
+    overflow-y: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content .dropdown-list-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content .dropdown-list-item:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* Show the dropdown menu on hover */
+.select-player:hover .dropdown-content {
+    display: block;
+}
+
+.select-player:hover {
+  cursor: pointer;
+}
+
+.player-bio-wrapper {
+  width: 80%;
+  background-color: hsl(210, 31%, 80%);
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.player-bio-wrapper .grid {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.matches-played-wrapper {
+  width: 80%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  background-color: hsl(210, 31%, 80%);
+}
+
+.matches {
+  text-align: center;
+}
+
+.matches h3 {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.opponent {
+  text-align: center;
+}
+
+.opponent h3 {
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.opponent .grid {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.opponent .result-label {
+  font-size: 20px;
+}
+
+.match-record-year-wrapper {
+  text-align: center;
+  background-color: hsl(210, 31%, 80%);
+  width: 80%;
+}
+
+#record-year-graph {
+  position: relative;;
+}
+
+.match-record-round-wrapper {
+  text-align: center;
+  background-color: hsl(210, 31%, 80%);
+  width: 80%;
+}
+
+#record-round-graph {
+  position: relative;
+}
+
+.match-record-yeartime-wrapper {
+  text-align: center;
+  background-color: hsl(210, 31%, 80%);
+  width: 80%;
+}
+
+#record-yeartime-graph {
+  position: relative;
+}
+
+.match-record-sets-wrapper {
+  text-align: center;
+  background-color: hsl(210, 31%, 80%);
+  width: 80%;
+}
+
+#record-sets-graph {
+  position: relative;
+}
+
+.match-record-round-pie-wrapper {
+  text-align: center;
+  background-color: hsl(210, 31%, 80%);
+  width: 80%;
+}
+
+#record-round-pie-graph {
+  position: relative;;
+}
+
+.arc path {
+  stroke: hsl(214, 10%, 58%);
+}
+
+.match-record-round-pie-wrapper .grid {
+  grid-template-columns: 55% 45%;
+}
+
+.match-record-sets-pie-wrapper .grid {
+  grid-template-columns: 60% 40%;
+}
+
+.match-record-sets-pie-wrapper {
+  text-align: center;
+  background-color: hsl(210, 31%, 80%);
+  width: 80%;
+}
+
+#record-sets-pie-graph {
+  position: relative;;
+}
+
+.match-record-year-pie-wrapper .grid {
+  grid-template-columns: 60% 40%;
+}
+
+.match-record-year-pie-wrapper {
+  text-align: center;
+  background-color: hsl(210, 31%, 80%);
+  width: 80%;
+}
+
+#record-year-pie-graph {
+  position: relative;;
+}
+
+
+
+#tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: auto;
+  padding: 2px;
+  font: 12px;
+  background: #fff;
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  background: #fff;
+  pointer-events: none;
+}
+
+
+.green {
+  color: #85A94E;
+}
+
+.red {
+  color: #B33430;
+}
+
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
